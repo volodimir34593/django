@@ -1,0 +1,14 @@
+<!-- product_list.html -->
+{% for category in categories %}
+    <h2>{{ category.name }}</h2>
+    {% for product in products %}
+        {% if product.category == category %}
+            <div>
+                <h3>{{ product.name }}</h3>
+                <p>{{ product.description }}</p>
+                <p>Price: {{ product.price }}</p>
+                <img src="{{ product.image.url }}" alt="{{ кросівки}}">
+            </div>
+        {% endif %}
+    {% endfor %}
+{% endfor %}
